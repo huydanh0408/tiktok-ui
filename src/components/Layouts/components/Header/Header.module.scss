@@ -1,0 +1,19 @@
+.wrapper {
+    height: var(--default-header-height, 60px);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    width: var(--default-layout-width, 1050px);
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 24px;
+    padding-left: 16px;
+}

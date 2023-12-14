@@ -1,5 +1,5 @@
 // Layouts
-import { HeaderOnly } from '~/components/Layout';
+import { HeaderOnly } from '~/components/Layouts';
 
 // Pages
 import Home from '~/pages/Home';
@@ -8,6 +8,7 @@ import Upload from '~/pages/Upload';
 import Profile from '~/pages/Profile';
 import Search from '~/pages/Search';
 
+// public routes
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/following', component: Following },
