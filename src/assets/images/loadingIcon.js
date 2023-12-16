@@ -9,7 +9,7 @@ const loadingIcon = (
         x="0px"
         y="0px"
         viewBox="25 20 50 50"
-        enable-background="new 0 0 0 0"
+        enableBackground="new 0 0 0 0"
         // xml:space="preserve"
     >
         <path

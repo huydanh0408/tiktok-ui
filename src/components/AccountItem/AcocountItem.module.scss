@@ -1,0 +1,48 @@
+.wrapper {
+    padding: 9px 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    // color: var(--text-color);
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    &:hover .more {
+        color: currentColor;
+    }
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+    margin-left: 1.2rem;
+}
+
+.username {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.check {
+    margin-left: 6px;
+    color: rgb(32, 213, 236);
+}
+
+.name {
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.more {
+    font-size: 1.4rem;
+    background-color: transparent;
+}
