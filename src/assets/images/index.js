@@ -1,10 +1,14 @@
-import searchIcon from './searchIcon';
-import loadingIcon from './loadingIcon';
+import { ReactComponent as SearchIcon } from './searchIcon.svg';
+import { ReactComponent as LoadingIcon } from './loadingIcon.svg';
+import { ReactComponent as DeviceIcon } from './deviceIcon.svg';
+import { ReactComponent as EllipsisIcon } from './ellipsisIcon.svg';
 
 const images = {
     logo: require('~/assets/images/logo.svg').default,
-    searchIcon,
-    loadingIcon,
+    searchIcon: <SearchIcon />,
+    loadingIcon: <LoadingIcon />,
+    deviceIcon: <DeviceIcon />,
+    ellipsisIcon: <EllipsisIcon />,
 };
 
 export default images;

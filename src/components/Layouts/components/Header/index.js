@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import className from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircleXmark,
+    faLaptop,
+    faPlus,
+} from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = className.bind(styles);
 
@@ -62,7 +67,21 @@ function Header() {
                         </div>
                     </Tippy>
                 </div>
-                <div className={cx('action')}>action</div>
+                <div className={cx('action')}>
+                    <Button leftIcon={<FontAwesomeIcon icon={faPlus} />} light>
+                        Upload
+                    </Button>
+
+                    {/* <Button primary>Log in</Button> */}
+                    <Button primary>Log in</Button>
+
+                    <button className={cx('download-btn')}>
+                        {images.deviceIcon}
+                    </button>
+                    <button className={cx('more-btn')}>
+                        {images.ellipsisIcon}
+                    </button>
+                </div>
             </div>
         </div>
     );

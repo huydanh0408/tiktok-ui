@@ -105,3 +105,20 @@
         background-color: rgba(22, 24, 35, 0.06);
     }
 }
+
+.action {
+    display: flex;
+    align-items: center;
+}
+
+.download-btn,
+.more-btn {
+    font-size: 2rem;
+    margin-left: 16px;
+    padding: 4px 8px;
+    background-color: transparent;
+}
+
+.more-btn {
+    padding: 4px 4px;
+}
