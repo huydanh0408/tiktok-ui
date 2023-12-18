@@ -20,6 +20,10 @@
         margin-left: 8px;
     }
 
+    .icon {
+        display: flex;
+    }
+
     // Button disabled
     &.disabled {
         pointer-events: none;
