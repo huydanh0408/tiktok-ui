@@ -82,6 +82,7 @@
 
 .loading,
 .clear {
+    display: flex;
     position: absolute;
     right: calc(var(--search-button-width) + 16px);
     top: 50%;
@@ -118,6 +119,7 @@
     margin-left: 16px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .more-btn {

@@ -23,6 +23,21 @@ const MENU_ITEMS = [
     {
         icon: images.languageIcon,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         icon: images.questionIcon,
@@ -57,6 +72,19 @@ const DOWNLOAD_APP_DATA = {
         'We maintain the same content and product safety standards across TikTok web and desktop app.',
 };
 
+// Handle Logic
+const handleMenuChange = (menuItem) => {
+    switch (menuItem.type) {
+        case 'language':
+            // Handle change language
+            console.log(menuItem);
+            break;
+
+        default:
+            break;
+    }
+};
+
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
 
@@ -70,7 +98,7 @@ function Header() {
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <img src={images.logo} alt="Tiktok" />
-                {/* <div> */}
+
                 <Tippy
                     interactive
                     visible={searchResult.length > 0}
@@ -105,7 +133,7 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                {/* </div> */}
+
                 <div className={cx('action')}>
                     <Button leftIcon={<FontAwesomeIcon icon={faPlus} />} light>
                         Upload
@@ -120,7 +148,7 @@ function Header() {
                         </button>
                     </DownloadApp>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             {images.ellipsisIcon}
                         </button>
