@@ -12,15 +12,14 @@
 }
 
 .inner {
+    display: flex;
     width: var(--default-layout-width, 1050px);
     height: 100%;
-    display: flex;
+    padding: 0px var(--default-layout-horizontal-spacer);
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    padding-right: 24px;
-    padding-left: 16px;
 }
 
 .search,
@@ -107,18 +106,37 @@
     }
 }
 
+// Actions
 .action {
     display: flex;
     align-items: center;
 }
 
+.action-btn,
 .download-btn,
 .more-btn {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     margin-left: 16px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.action-btn {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.user-avatar {
+    height: 32px;
+    width: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 24px;
     cursor: pointer;
 }
 

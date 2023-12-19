@@ -1,4 +1,4 @@
-import Tippy from '@tippyjs/react/headless';
+import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
 import styles from './DownloadApp.module.scss';
@@ -9,10 +9,11 @@ const cx = classNames.bind(styles);
 
 function DownloadApp({ children, data }) {
     return (
-        <Tippy
+        <HeadlessTippy
             interactive
             // visible
             delay={[0, 700]}
+            offset={[12, 8]}
             placement="bottom-end"
             render={(attrs) => (
                 // <div className={cx('wrapper')} tabIndex={-1} {...attrs}>
@@ -32,7 +33,7 @@ function DownloadApp({ children, data }) {
             )}
         >
             {children}
-        </Tippy>
+        </HeadlessTippy>
     );
 }
 
