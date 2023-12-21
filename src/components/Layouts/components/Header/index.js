@@ -14,6 +14,27 @@ import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Menu';
 import DownloadApp from '~/components/DownloadApp';
+import {
+    DarkModeIcon,
+    DeviceIcon,
+    DownloadTikTokAppIcon,
+    EllipsisIcon,
+    FavoriteIcon,
+    InboxIcon,
+    KeyboardIcon,
+    LanguageIcon,
+    LiveCreatorHubIcon,
+    LiveStudioIcon,
+    LoadingIcon,
+    LogoutIcon,
+    MessageIcon,
+    QuestionIcon,
+    SearchIcon,
+    SettingIcon,
+    TikTokCoinIcon,
+    UserIcon,
+} from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = className.bind(styles);
 
@@ -22,12 +43,12 @@ const userCurrent = true;
 
 const MENU_ITEMS = [
     {
-        icon: images.liveIcon,
+        icon: <LiveCreatorHubIcon />,
         title: 'LIVE Creator Hub',
         href: 'https://www.tiktok.com/live/creators/vi-VN/?enter_from=more&lang=en&region=VN',
     },
     {
-        icon: images.languageIcon,
+        icon: <LanguageIcon />,
         title: 'English',
         children: {
             title: 'Language',
@@ -46,16 +67,16 @@ const MENU_ITEMS = [
         },
     },
     {
-        icon: images.questionIcon,
+        icon: <QuestionIcon />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: images.keyboardIcon,
+        icon: <KeyboardIcon />,
         title: 'Keyboard shortcuts',
     },
     {
-        icon: images.darkModeIcon,
+        icon: <DarkModeIcon />,
         title: 'Dark mode',
         button: (
             <Switch
@@ -73,41 +94,41 @@ const MENU_ITEMS = [
 
 const USER_MENU_ITEMS = [
     {
-        icon: images.userIcon,
+        icon: <UserIcon />,
         title: 'View Profile',
         to: '/@huydanh.12',
     },
     {
-        icon: images.favoriteIcon,
+        icon: <FavoriteIcon />,
         title: 'Favorites',
         to: '/@huydanh.12',
     },
     {
-        icon: images.tiktokCoinIcon,
+        icon: <TikTokCoinIcon />,
         title: 'Get Coins',
         to: '/coin',
     },
     {
-        icon: images.settingIcon,
+        icon: <SettingIcon />,
         title: 'Settings',
         to: '/setting',
     },
     {
-        icon: images.liveStudioIcon,
+        icon: <LiveStudioIcon />,
         title: 'LIVE Studio',
         to: '/live',
     },
 
     ...MENU_ITEMS,
     {
-        icon: images.logOutIcon,
+        icon: <LogoutIcon />,
         title: 'Log out',
         separate: true,
     },
 ];
 
 const DOWNLOAD_APP_DATA = {
-    image: images.downloadTiktokApp,
+    image: <DownloadTikTokAppIcon />,
     title: 'TikTok desktop app',
     subTitle:
         'We maintain the same content and product safety standards across TikTok web and desktop app.',
@@ -166,11 +187,9 @@ function Header() {
                         <button className={cx('clear')}>
                             <FontAwesomeIcon icon={faCircleXmark} />
                         </button>
-                        <span className={cx('loading')}>
-                            {images.loadingIcon}
-                        </span>
+                        <span className={cx('loading')}>{<LoadingIcon />}</span>
                         <button className={cx('search-btn')}>
-                            {images.searchIcon}
+                            {<SearchIcon />}
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -185,7 +204,7 @@ function Header() {
 
                     <DownloadApp data={DOWNLOAD_APP_DATA}>
                         <button className={cx('download-btn')}>
-                            {images.deviceIcon}
+                            <DeviceIcon />
                         </button>
                     </DownloadApp>
 
@@ -197,7 +216,7 @@ function Header() {
                                 placement="bottom"
                             >
                                 <button className={cx('action-btn')}>
-                                    {images.messageIcon}
+                                    {<MessageIcon />}
                                 </button>
                             </Tippy>
                             <Tippy
@@ -206,7 +225,7 @@ function Header() {
                                 placement="bottom"
                             >
                                 <button className={cx('action-btn')}>
-                                    {images.inboxIcon}
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -217,14 +236,15 @@ function Header() {
                         onChange={handleMenuChange}
                     >
                         {userCurrent ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/410545212_2433221633548469_6567833593769972942_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c42490&_nc_ohc=ckb_7hq-Ak4AX9vpMzS&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfC0FpNuz0__MgXdEwjJN2d-t2swvV-5mC_gkItzE3ht1g&oe=65876287"
                                 alt="avt1"
+                                fallback="https://scontent.cdninstagram.com/v/t39.30808-6/396386610_18285487642146857_6470196609805964296_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=1&_nc_ohc=9j4epaUt_AgAX9z4tNH&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIyMzY4NjkzNjA0MDkxMzgwMA%3D%3D.2-ccb7-5&oh=00_AfDIzZ_7XY5pxQe8E61AGT4sHN-hCU5K0TpnOTJ5DwtXhw&oe=6588FFA4&_nc_sid=10d13b"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
-                                {images.ellipsisIcon}
+                                <EllipsisIcon />
                             </button>
                         )}
                     </Menu>
