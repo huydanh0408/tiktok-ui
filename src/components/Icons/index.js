@@ -232,27 +232,16 @@ export function LoadingIcon({
             className={className}
             width={width}
             height={height}
-            version="1.1"
+            data-e2e=""
+            viewBox="0 0 48 48"
+            fill="rgba(22, 24, 35, .34)"
             xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            viewBox="25 25 50 50"
-            enableBackground="new 0 0 0 0"
         >
             <path
-                fill="rgba(22, 24, 35, .34)"
-                d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
-            >
-                <animateTransform
-                    attributeName="transform"
-                    attributeType="XML"
-                    type="rotate"
-                    dur="1s"
-                    from="0 50 50"
-                    to="360 50 50"
-                    repeatCount="indefinite"
-                />
-            </path>
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M24 12.5C17.6487 12.5 12.5 17.6487 12.5 24C12.5 30.3513 17.6487 35.5 24 35.5C26.8172 35.5 29.3919 34.4902 31.3919 32.8101C32.4491 31.9219 34.026 32.059 34.9142 33.1161C35.8023 34.1733 35.6653 35.7503 34.6081 36.6384C31.741 39.0471 28.0369 40.5 24 40.5C14.8873 40.5 7.5 33.1127 7.5 24C7.5 14.8873 14.8873 7.5 24 7.5C33.1127 7.5 40.5 14.8873 40.5 24C40.5 25.3807 39.3807 26.5 38 26.5C36.6193 26.5 35.5 25.3807 35.5 24C35.5 17.6487 30.3513 12.5 24 12.5Z"
+            ></path>
         </svg>
     );
 }
