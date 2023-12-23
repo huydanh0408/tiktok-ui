@@ -9,7 +9,7 @@ function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
-            <div className={cx('container')}>
+            <div className={cx('container')} style={{ height: 1000 }}>
                 <Sidebar />
                 <div className={cx('content')}>{children}</div>
             </div>

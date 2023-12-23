@@ -61,7 +61,14 @@ function Menu({
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div
+                            className={cx(
+                                'menu-body',
+                                history.length > 1 && 'menu-body-lv2',
+                            )}
+                        >
+                            {renderItems()}
+                        </div>
                     </PopperWrapper>
                 </div>
             )}
