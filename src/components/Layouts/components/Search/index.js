@@ -34,8 +34,15 @@ function Search() {
         setShowResult(false);
     };
 
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
+    };
+
     useEffect(() => {
-        if (!debounced) {
+        if (!debounced.trim()) {
             setSearchResult([]);
             return;
         }
@@ -74,7 +81,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Search accounts and videos"
                     spellCheck={false}
-                    onChange={(e) => setSearchValue(e.target.value.trimStart())}
+                    onChange={handleChange}
                     onFocus={() => {
                         setShowResult(true);
                     }}
@@ -89,7 +96,12 @@ function Search() {
                     <span className={cx('loading')}>{<LoadingIcon />}</span>
                 )}
 
-                <button className={cx('search-btn')}>{<SearchIcon />}</button>
+                <button
+                    className={cx('search-btn')}
+                    onMouseDown={(e) => e.preventDefault()}
+                >
+                    {<SearchIcon />}
+                </button>
             </div>
         </HeadlessTippy>
     );
