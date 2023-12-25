@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
 import styles from './Menu.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import MenuItem from '~/components/Menu/MenuItem';
+import MenuItem from '~/components/Popper/Menu/MenuItem';
 import Header from './Header';
 
 const cx = classNames.bind(styles);
@@ -83,5 +84,12 @@ function Menu({
         </div>
     );
 }
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    onChange: PropTypes.func,
+    hideOnClick: PropTypes.bool,
+};
 
 export default Menu;

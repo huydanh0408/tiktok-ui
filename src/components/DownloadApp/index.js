@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
@@ -39,5 +40,10 @@ function DownloadApp({ children, data }) {
         </div>
     );
 }
+
+Button.propTypes = {
+    children: PropTypes.node.isRequired,
+    data: PropTypes.object,
+};
 
 export default DownloadApp;

@@ -9,7 +9,7 @@ import Switch from 'react-switch';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
-import Menu from '~/components/Menu';
+import Menu from '~/components/Popper/Menu';
 import DownloadApp from '~/components/DownloadApp';
 import {
     DarkModeIcon,

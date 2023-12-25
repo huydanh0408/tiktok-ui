@@ -1,4 +1,5 @@
-import classNameS from 'classnames/bind';
+import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faEllipsis } from '@fortawesome/free-solid-svg-icons';
@@ -6,7 +7,7 @@ import { faCheckCircle, faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import style from './AccountItem.module.scss';
 import Image from '~/components/Image';
 
-const cx = classNameS.bind(style);
+const cx = classNames.bind(style);
 
 function AccountItem({ data }) {
     return (
@@ -34,5 +35,9 @@ function AccountItem({ data }) {
         </Link>
     );
 }
+
+AccountItem.propTypes = {
+    data: PropTypes.object.isRequired,
+};
 
 export default AccountItem;
