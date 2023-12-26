@@ -12,21 +12,21 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import DownloadApp from '~/components/DownloadApp';
 import {
-    DarkModeIcon,
+    MoonIcon,
     DeviceIcon,
-    DownloadTikTokAppIcon,
+    TiktokLaptopIcon,
     EllipsisIcon,
-    FavoriteIcon,
-    InboxIcon,
+    BookmarkIcon,
+    MessageIcon,
     KeyboardIcon,
     LanguageIcon,
-    LiveCreatorHubIcon,
-    LiveStudioIcon,
+    LiveBulbIcon,
+    LiveIcon,
     LogoutIcon,
-    MessageIcon,
+    PaperPlaneIcon,
     QuestionIcon,
     SettingIcon,
-    TikTokCoinIcon,
+    TiktokCoinIcon,
     UserIcon,
 } from '~/components/Icons';
 import Image from '~/components/Image';
@@ -40,7 +40,7 @@ const userCurrent = true;
 
 const MENU_ITEMS = [
     {
-        icon: <LiveCreatorHubIcon />,
+        icon: <LiveBulbIcon />,
         title: 'LIVE Creator Hub',
         href: 'https://www.tiktok.com/live/creators/vi-VN/?enter_from=more&lang=en&region=VN',
     },
@@ -73,7 +73,7 @@ const MENU_ITEMS = [
         title: 'Keyboard shortcuts',
     },
     {
-        icon: <DarkModeIcon />,
+        icon: <MoonIcon />,
         title: 'Dark mode',
         button: (
             <Switch
@@ -96,12 +96,12 @@ const USER_MENU_ITEMS = [
         to: '/@huydanh.12',
     },
     {
-        icon: <FavoriteIcon />,
+        icon: <BookmarkIcon />,
         title: 'Favorites',
         to: '/@huydanh.12',
     },
     {
-        icon: <TikTokCoinIcon />,
+        icon: <TiktokCoinIcon />,
         title: 'Get Coins',
         to: '/coin',
     },
@@ -111,7 +111,7 @@ const USER_MENU_ITEMS = [
         to: '/setting',
     },
     {
-        icon: <LiveStudioIcon />,
+        icon: <LiveIcon />,
         title: 'LIVE Studio',
         to: '/live',
     },
@@ -125,7 +125,7 @@ const USER_MENU_ITEMS = [
 ];
 
 const DOWNLOAD_APP_DATA = {
-    image: <DownloadTikTokAppIcon />,
+    image: <TiktokLaptopIcon />,
     title: 'TikTok desktop app',
     subTitle:
         'We maintain the same content and product safety standards across TikTok web and desktop app.',
@@ -176,7 +176,7 @@ function Header() {
                                 placement="bottom"
                             >
                                 <button className={cx('action-btn')}>
-                                    {<MessageIcon />}
+                                    {<PaperPlaneIcon />}
                                 </button>
                             </Tippy>
                             <Tippy
@@ -185,7 +185,7 @@ function Header() {
                                 placement="bottom"
                             >
                                 <button className={cx('action-btn')}>
-                                    <InboxIcon />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                         </>
