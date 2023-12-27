@@ -4,10 +4,9 @@
     position: relative;
     padding: 16px 0;
     line-height: 1.8rem;
-    overflow: hidden;
 
     &::before {
-        border-top: 1px solid #1618231f;
+        border-top: 1px solid var(--light-text-color);
         content: '';
         position: absolute;
         left: 8px;
