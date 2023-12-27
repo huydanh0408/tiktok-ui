@@ -9,6 +9,7 @@ import {
     UserIcon,
     CompassIcon,
 } from '~/components/Icons';
+import SuggestedAccounts from '~/components/SuggestedAccounts';
 
 const cx = className.bind(styles);
 
@@ -42,6 +43,10 @@ function Sidebar() {
                     icon={<UserIcon width="2.4rem" height="2.4rem" />}
                 />
             </Menu>
+
+            <SuggestedAccounts label="Suggested accounts" />
+
+            <SuggestedAccounts label="Following accounts" />
         </aside>
     );
 }

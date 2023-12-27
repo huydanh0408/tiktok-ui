@@ -1,0 +1,85 @@
+.wrapper {
+    --light-text-color: #161823bf;
+
+    position: relative;
+    padding: 16px 0;
+    line-height: 1.8rem;
+    overflow: hidden;
+
+    &::before {
+        border-top: 1px solid #1618231f;
+        content: '';
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 0px;
+        height: 1px;
+        transform: scaleY(0.5);
+    }
+}
+.label {
+    padding: 0px 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--light-text-color);
+}
+
+// AccountItem CSS
+
+.account-item {
+    display: flex;
+    padding: 8px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 12px;
+    line-height: 1;
+}
+
+.username {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.username-text {
+    max-width: 145px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+}
+
+.check {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    color: #20d5ec;
+}
+
+.name {
+    font-size: 1.2em;
+    color: var(--light-text-color);
+}
+
+// more-btn
+.more-btn {
+    width: fit-content;
+    margin-top: 8px;
+    padding: 0 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+}
